@@ -109,16 +109,17 @@ def draw_parallel_lines(n, point, length, window):
     #          ** FIRST DO A CONCRETE EXAMPLE BY HAND! **
     ####################################################################
     # ------------------------------------------------------------------
-    window = rg.RoseWindow
-    point1 = rg.Point
-    point2 = rg.Point
+    x = point.x
+    x2 = x + length
     for k in range(n):
-        ynew = 30*n
-        xnew = point1.x +length
 
-        point2 = point1(xnew,ynew)
+        y = point.y + k*30
+        point1 =rg.Point(x,y)
+        y2=y+30
+        point2=rg.Point(x2,y2)
         line = rg.Line(point1,point2)
         line.attach_to(window)
+
     window.render()
 
 
